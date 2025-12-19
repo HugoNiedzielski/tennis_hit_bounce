@@ -123,16 +123,18 @@ To visualize the results (Ground Truth vs Prediction) overlayed on the match vid
 
 ## Requirements
 
-- numpy
-- pandas
-- scipy
-- scikit-learn
-- xgboost
-- joblib
-- optuna
-- tqdm
-- matplotlib & seaborn (for analysis)
-- opencv-python (for visualization)
+- numpy==2.1.3
+- pandas==2.3.3
+- scipy==1.16.3
+- scikit-learn==1.7.2
+- xgboost==3.0.5
+- joblib==1.5.2
+- optuna==4.5.0
+- tqdm==4.67.1
+- matplotlib==3.10.0
+- seaborn==0.13.2
+- opencv-python==4.12.0.88
+- ipykernel==6.30.0
 
 ---
 
