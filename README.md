@@ -1,6 +1,6 @@
 # Roland-Garros 2025: Tennis Hit & Bounce Detection 🎾
 
-## 📌 Project Overview
+## Project Overview
 
 This repository contains a solution for the **Sport Scientist Computer Vision & ML Exercise**.The goal is to detect **Hit** (racket impact) and **Bounce** (court impact) events using 2D ball-tracking data from the Roland-Garros 2025 Final.
 
@@ -11,7 +11,7 @@ In a sports analytics context, reliable event detection is critical for reconstr
 
 ---
 
-## 💡 The Challenge & Strategy
+## The Challenge & Strategy
 
 Raw ball-tracking data is often noisy/jittery.A simple physics model can detect most impacts (High Recall) but often mistakes tracking noise for events (Low Precision).
 
@@ -22,12 +22,12 @@ Raw ball-tracking data is often noisy/jittery.A simple physics model can detect 
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 tennis_project/
 │
-├── input_data/                 # Input folder (Place JSONs and MP4 here)
+├── input_data/                 # Input folder (JSONs and MP4 here)
 │   └── (ball_data_*.json)
 │
 ├── output_results/             # Outputs (Enriched JSONs generated here)
@@ -109,11 +109,11 @@ python main.py
 ```
 
 **Output:**  
-Enriched JSON files with the new key `"pred_action":  "hit" | "bounce" | "air"` will be available in `output_results/`.
+Enriched JSON files with the new key `"pred_action":  "hit" | "bounce" | "air"` will be available in `output_results/`. One file is created per method, so you will find two files `supervised` and `unsupervised`. 
 
 ---
 
-## 📽️ Visualization
+## Visualization
 
 To visualize the results (Ground Truth vs Prediction) overlayed on the match videoand some EDA that helped building the physics-based model, please run the Jupyter Notebook :
 
