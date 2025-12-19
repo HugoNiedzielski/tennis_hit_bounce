@@ -66,7 +66,7 @@ Relies on signal processing (Savitzky-Golay smoothing) to calculate derivatives.
 
 A Gradient Boosting model trained to distinguish true events from noise.
 
-- **Feature Engineering**: 33 features including Jerk (derivative of acceleration), Angles, and Windowed Lag/Lead features (t-5 to t+5).
+- **Feature Engineering**: Features including Jerk (derivative of acceleration), Angles, and Windowed Lag/Lead features (t-5 to t+5).
 - **Post-Processing**: Non-Maximum Suppression (NMS) ensures only the highest confidence event is selected within a 200ms refractory period (to ensure no duplicates).
 
 ---
@@ -96,9 +96,8 @@ pip install -r requirements.txt
 
 ### 2.Data Setup
 
-- Create a folder named `input_data` at the root.
-- Copy all JSON files (`ball_data_*.json`) into `input_data/`.
-- (Optional) Copy the video `Alcaraz_Sinner_2025.mp4` into `input_data/` for visualization.
+- All original JSON files (`ball_data_*.json`) can be found in `input_data/`.
+- (Optional) Copy the video `Alcaraz_Sinner_2025.mp4` into `input_data/` for visualization. It is used in the visualization notebook only. Here, the video is optional since I provided two extracts.
 
 ### 3.Execution
 
@@ -124,7 +123,7 @@ Enriched JSON files with the new key `"pred_action":  "hit" | "bounce" | "air"` 
 
 ## Visualization
 
-To visualize the results (Ground Truth vs Prediction) overlayed on the match videoand some EDA that helped building the physics-based model, please run the Jupyter Notebook :
+To visualize the results (Ground Truth vs Prediction) overlayed on the match video and some EDA that helped building the physics-based model, please run the Jupyter Notebook :
 
 **`notebooks/visualization.ipynb`**
 
