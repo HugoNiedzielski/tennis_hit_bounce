@@ -108,6 +108,15 @@ Run the batch processor. This script will automatically create the output folder
 python main.py
 ```
 
+If one wanted to re-train the model, he would be able to do so using the following command : 
+
+```bash
+python train_model.py
+```
+
+It would generate a new `tennis_xgb_supervised.pkl`, or with a new name if you change it manually at the beginning of the file.
+For the purpose of this demonstration, it is not recommended though.
+
 **Output:**  
 Enriched JSON files with the new key `"pred_action":  "hit" | "bounce" | "air"` will be available in `output_results/`. One file is created per method, so you will find two files `supervised` and `unsupervised`. 
 
